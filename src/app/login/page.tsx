@@ -8,6 +8,9 @@ export default function Home() {
   const handleClick = () => {
     router.push('/signup')
   }
+  const onClick = () => {
+    router.push('/passwordReset')
+  }
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center">
       <div className="relative w-[320px] h-[600px] rounded-3xl overflow-hidden shadow-2xl">
@@ -37,7 +40,7 @@ export default function Home() {
 
           <button className="w-full bg-white text-black py-2 rounded-full font-bold hover:bg-gray-200 transition-all">LOGIN</button>
 
-          <p className="text-sm text-white mt-4 cursor-pointer">forgot your password ?</p>
+          <p className="text-sm text-white mt-4 cursor-pointer"onClick={onClick}>forgot your password ?</p>
           <button className="text-white mt-16 text-sm hover:text-blue-200" onClick={handleClick}>SIGN UP</button>
         </div>
       </div>

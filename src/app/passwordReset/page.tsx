@@ -6,7 +6,10 @@ import { useRouter } from "next/navigation";
 const Reser = () => {
     const router = useRouter();
     const handleClick = () => {
-        router.push('/login')
+      router.push('/login')
+    }
+    const onClick = () =>{
+      router.push('/confirm')
     }
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
@@ -22,7 +25,7 @@ const Reser = () => {
                     <input type="text" placeholder="USERNAME" className="w-full bg-transparent border-b border-gray-500 placeholder-white text-white text-sm text-center px-2 py-2 outline-none"/>
                 </label>
               </div>
-              <button className="text-white text-sm border-3 rounded-2xl px-8 py-1 font-black border-white hover:text-blue-200"> SEND</button>
+              <button className="text-white text-sm border-3 rounded-2xl px-8 py-1 font-black border-white hover:text-blue-200" onClick={onClick}> SEND</button>
               <button className="text-white mt-16 text-md hover:text-blue-200" onClick={handleClick}>Login</button>
             </div>     
         </div>
