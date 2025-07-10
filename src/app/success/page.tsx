@@ -18,7 +18,7 @@ const Success = () => {
                     <h1 className="text-sm text-white font-black">account created successfully</h1>
                     <p className="text-sm mt-4">Congratulations you are now part of the famly</p>
                     </div>
-                    <button className="text-white mt-12 text-md hover:text-blue-200" onClick={handleClick}>LOGIN</button>
+                    <button className="text-white mt-24 text-sm border-3 rounded-2xl px-8 py-1 font-black border-white hover:text-blue-200" onClick={handleClick}>LOGIN</button>
                 </div>     
             </div>
         </div>   

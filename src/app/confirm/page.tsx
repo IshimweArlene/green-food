@@ -22,7 +22,7 @@ const Confirm = () => {
                     <p className="text-sm mt-12">Did not work?Doubts?</p>
                     <p className="text-sm text-blue-600 mt-2 cursor-pointer">Click here</p>
                     </div>
-                    <button className="text-white mt-12 text-md hover:text-blue-200" onClick={handleClick}>LOGIN</button>
+                    <button className="text-white text-sm border-3 rounded-2xl px-8 py-1 font-black border-white hover:text-blue-200" onClick={handleClick}>LOGIN</button>
                 </div>     
             </div>
         </div>
