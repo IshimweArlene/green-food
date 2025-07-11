@@ -4,14 +4,14 @@ import { useRouter, usePathname } from 'next/navigation';
 import { FaHome, FaUser, FaQuestionCircle } from 'react-icons/fa';
 import { FiClipboard, FiSettings } from 'react-icons/fi';
 
-export default function BottomNav() {
+export default function Footer() {
   const router = useRouter();
   const pathname = usePathname();
 
   const isActive = (route: string) => pathname === route;
 
   const navItems = [
-    { label: 'Home', icon: <FaHome />, route: '/' },
+    { label: 'Home', icon: <FaHome />, route: '/home' },
     { label: 'User', icon: <FaUser />, route: '/user' },
     { label: 'Orders', icon: <FiClipboard />, route: '/orders' },
     { label: 'Help', icon: <FaQuestionCircle />, route: '/help' },
@@ -19,20 +19,19 @@ export default function BottomNav() {
   ];
 
   return (
-    <div className="fixed bottom-0 w-full bg-white border-t px-4 py-2 flex justify-between z-50">
+    <div className="w-full bg-white border-t px-4 py-2 flex justify-between">
       {navItems.map((item, index) => (
         <button
           key={index}
           onClick={() => router.push(item.route)}
-          className="flex flex-col items-center text-xs gap-1"
+          className="flex flex-col items-center text-xs gap-1 w-full"
         >
-          {/* Use type-safe spread for SVG icon props */}
           {React.cloneElement(item.icon, {
             ...(item.icon.props as object),
-            className: isActive(item.route) ? 'text-green-400' : 'text-gray-500',
+            className: isActive(item.route) ? 'text-cyan-400' : 'text-gray-500',
             size: 20,
           })}
-          <span className={isActive(item.route) ? 'text-green-400' : 'text-gray-500'}>
+          <span className={isActive(item.route) ? 'text-cyan-400' : 'text-gray-500'}>
             {item.label}
           </span>
         </button>
