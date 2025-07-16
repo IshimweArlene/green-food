@@ -18,7 +18,7 @@ const SearchNav = () => {
     <div className="px-4 mb-4 relative">
      <div className="relative w-full">
         <input type="text" placeholder="What do you want to eat?" className="block w-52 h-7 text-gray-900 rounded-2xl px-2 text-[10px] my-4 mx-auto border-2 border-cyan-400 focus:outline-none"/>
-        <div className="absolute right-[90px] top-[23px] text-black text-sm">
+        <div className="absolute right-[60px] top-[8px] text-black text-sm">
           <FaMagnifyingGlass />
         </div>
       </div>
